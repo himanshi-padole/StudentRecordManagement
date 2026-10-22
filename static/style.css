@@ -1,0 +1,401 @@
+
+:root {
+    --orange: #F06A1A;
+    --orange-light: #FFF0E3;
+    --background: #FFFAF5;
+    --white: #FFFFFF;
+    --text: #202338;
+    --muted: #777C91;
+    --border: #F1E5D8;
+    --green: #16865D;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+button, input, select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    background: #FFF4E8;
+    border-right: 1px solid var(--border);
+    padding: 25px 18px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    background: #FFE0C2;
+    color: #D9570B;
+    border-radius: 12px;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.brand h3 {
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+
+.brand p {
+    font-size: 11px;
+    color: var(--muted);
+    margin: 0;
+}
+
+nav {
+    display: grid;
+    gap: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3B414C;
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+nav a:hover,
+nav a.active {
+    background: #FFE2C9;
+    color: #D9570B;
+}
+
+/* Main content */
+
+.main {
+    padding: 30px;
+    min-width: 0;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+h1 {
+    font-size: 27px;
+    margin: 0;
+}
+
+.topbar p,
+.section-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 8px 0 0;
+}
+
+.admin {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 12px 16px;
+    border-radius: 25px;
+    font-size: 13px;
+}
+
+/* Dashboard cards */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    padding: 23px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.orange {
+    background: #FFF0E3;
+}
+
+.green {
+    background: #EAF7EF;
+}
+
+.peach {
+    background: #FFF0E3;
+}
+
+.stat-card p {
+    color: #686B78;
+    font-size: 13px;
+    margin: 0 0 12px;
+}
+
+.stat-card h2 {
+    font-size: 27px;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+/* White sections */
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 23px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(60, 40, 20, 0.04);
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.heading-icon {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    background: var(--orange);
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+/* Student form */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 22px;
+}
+
+.field {
+    display: grid;
+    gap: 9px;
+}
+
+.field label {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #DDDDE1;
+    border-radius: 9px;
+    background: white;
+    color: var(--text);
+    outline: none;
+}
+
+.field input:focus,
+.field select:focus,
+.search:focus {
+    border-color: var(--orange);
+}
+
+.primary-btn {
+    background: var(--orange);
+    color: white;
+    border: 0;
+    border-radius: 9px;
+    padding: 13px 20px;
+    font-weight: 600;
+}
+
+.primary-btn:hover {
+    background: #D9570B;
+}
+
+/* Student table */
+
+.search {
+    width: 280px;
+    max-width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #DDDDE1;
+    border-radius: 9px;
+    outline: none;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    white-space: nowrap;
+}
+
+thead {
+    background: #FFF3E8;
+}
+
+th {
+    padding: 14px 12px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+td {
+    padding: 16px 12px;
+    border-bottom: 1px solid #F0EBE7;
+    font-size: 13px;
+}
+
+tbody tr:hover {
+    background: #FFFCF8;
+}
+
+/* Hashing demonstration */
+
+.hash-box {
+    background: var(--orange-light);
+    border-radius: 12px;
+    padding: 18px;
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+.hash-box p {
+    margin: 5px 0;
+}
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 15px 0;
+}
+
+/* Mobile responsive design */
+
+@media (max-width: 1000px) {
+    .layout {
+        grid-template-columns: 200px minmax(0, 1fr);
+    }
+
+    .main {
+        padding: 22px;
+    }
+
+    .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stats {
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding: 16px;
+    }
+
+    .brand {
+        margin-bottom: 18px;
+    }
+
+    nav {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    nav a {
+        white-space: nowrap;
+        padding: 10px;
+    }
+
+    .main {
+        padding: 18px 13px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .card {
+        padding: 17px;
+    }
+}
